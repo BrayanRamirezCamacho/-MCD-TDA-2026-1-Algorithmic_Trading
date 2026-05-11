@@ -1,14 +1,11 @@
-install:
-	pip install -r requirements.txt
+sync:
+	uv sync
 
 run:
-	python -m src.run_mvp
+	uv run trading-tda
 
-test:
-	pytest tests -q.PHONY: install test
+setup-talib:
+	bash scripts/setup_talib.sh
 
-install:
-	pip install -r requirements.txt
-
-test:
-	pytest -q
+fetch-freqtrade-data: 
+	uv run python scripts/fetch_freqtrade_data.py --copy-data

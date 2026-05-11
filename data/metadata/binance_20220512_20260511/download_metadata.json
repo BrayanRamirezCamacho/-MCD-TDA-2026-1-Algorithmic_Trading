@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-05-11T13:27:26.987833",
+  "exchange": "binance",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT",
+    "BNB/USDT",
+    "SOL/USDT",
+    "XRP/USDT",
+    "ADA/USDT",
+    "DOGE/USDT"
+  ],
+  "timeframes": [
+    "15m",
+    "4h"
+  ],
+  "timerange": "20220512-20260511",
+  "data_format": "parquet",
+  "moved_data": true,
+  "source_data_dir": "/home/isaul/projects/trading-tda/freqtrade/user_data/data/binance",
+  "destination_data_dir": "/home/isaul/projects/trading-tda/data/raw/binance",
+  "command": [
+    "docker",
+    "compose",
+    "-f",
+    "/home/isaul/projects/trading-tda/freqtrade/docker-compose.yml",
+    "run",
+    "--rm",
+    "freqtrade",
+    "download-data",
+    "--config",
+    "user_data/config.json",
+    "--exchange",
+    "binance",
+    "--pairs",
+    "BTC/USDT",
+    "ETH/USDT",
+    "BNB/USDT",
+    "SOL/USDT",
+    "XRP/USDT",
+    "ADA/USDT",
+    "DOGE/USDT",
+    "--timeframes",
+    "15m",
+    "4h",
+    "--timerange",
+    "20220512-20260511",
+    "--data-format-ohlcv",
+    "parquet"
+  ]
+}

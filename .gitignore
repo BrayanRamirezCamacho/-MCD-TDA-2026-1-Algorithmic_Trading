@@ -13,9 +13,11 @@ env/
 data/raw/*
 data/interim/*
 data/processed/*
+data/metadata/*
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
+!data/metadata/.gitkeep
 
 # Models
 models/*

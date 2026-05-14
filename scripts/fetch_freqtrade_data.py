@@ -138,7 +138,7 @@ def export_metadata(args, cmd, moved_data=False):
         'pairs': args.pairs,
         'timeframes': args.timeframes,
         'timerange': args.timerange,
-        'data_format': 'parquet',
+        'data_format': 'feather',
         'moved_data': moved_data,
         'source_data_dir': str(src_data_dir),
         'destination_data_dir': str(dst_data_dir),
@@ -171,7 +171,7 @@ def main():
         '--pairs', *args.pairs,
         '--timeframes', *args.timeframes,
         '--timerange', args.timerange,
-        '--data-format-ohlcv', 'parquet',
+        '--data-format-ohlcv', 'feather',
     ]
 
     logger.info('Starting Freqtrade download:')

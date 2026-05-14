@@ -1,7 +1,15 @@
 services:
+
   freqtrade:
     image: freqtradeorg/freqtrade:stable
     container_name: freqtrade
     volumes:
       - ./user_data:/freqtrade/user_data
     working_dir: /freqtrade
+  
+  research:
+    image: freqtradeorg/freqtrade:stable
+    container_name: research
+    volumes:
+      - ./user_data:/freqtrade/user_data
+      

@@ -48,6 +48,12 @@ def parse_args():
         help='Freqtrade timerange'
     )
 
+    parser.add_argument(
+        '--timeframe',
+        default='15m',
+        help='Freqtrade timeframe'
+    )
+
     return parser.parse_args()
 
 
@@ -132,6 +138,8 @@ def main():
         args.strategy,
         '--timerange',
         args.timerange,
+        '--timeframe',
+        args.timeframe,
         '--export',
         'trades',
         '--backtest-directory',

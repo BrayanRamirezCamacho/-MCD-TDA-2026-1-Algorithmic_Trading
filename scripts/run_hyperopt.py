@@ -53,6 +53,12 @@ def parse_args():
     )
 
     parser.add_argument(
+        '--timeframe',
+        default='15m',
+        help='Freqtrade timeframe'
+    )
+
+    parser.add_argument(
         '--epochs',
         type=int,
         default=100,
@@ -173,6 +179,8 @@ def main():
         args.strategy,
         '--timerange',
         args.timerange,
+        '--timeframe',
+        args.timeframe,
         '--spaces',
         *args.spaces,
         '-e',

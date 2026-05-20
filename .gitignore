@@ -23,6 +23,10 @@ data/metadata/*
 models/*
 !models/.gitkeep
 
+# Results
+results/*
+!results/.gitkeep
+
 # OS
 .DS_Store
 Thumbs.db
@@ -50,3 +54,4 @@ freqtrade/user_data/strategies/*.json
 todo.md
 .notes.md.swp
 .vscode
+temp/

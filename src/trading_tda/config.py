@@ -11,5 +11,6 @@ EXTERNAL_DATA_DIR = DATA_DIR / "external"
 METADATA_DIR = DATA_DIR / "metadata"
 
 RESULTS_DIR = PROJECT_ROOT / "results"
+MODELS_DIR = PROJECT_ROOT / "models"
 SCRIPTS_DIR = PROJECT_ROOT / "scripts"
 FREQTRADE_DIR = PROJECT_ROOT / "freqtrade"
